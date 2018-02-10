@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+   <!-- <bean id="emp2" class="co.edureka.Employee" scope="prototype"> -->
+   <bean id="emp2" class="co.edureka.Employee" init-method="myInit" destroy-method="myDestroy">
+       <property name="id" value="102"/>
+       <property name="name" value="Jennie"/>
+       <property name="salary" value="67500"/>
+       <property name="email" value="jennie@example.com"/>
+       <property name="address" value="Country Homes"/>
+   </bean>
+   
+   <bean class="co.edureka.PostProcessor"/>
+   
+   <!-- <bean id="emp3" class="co.edureka.Employee">
+       <property name="id" value="103"/>
+       <property name="name" value="Fionna"/>
+       <property name="salary" value="57500"/>
+       <property name="email" value="fionna@example.com"/>
+       <property name="address" value="Country Homes North"/>
+   </bean> -->
+
+</beans>

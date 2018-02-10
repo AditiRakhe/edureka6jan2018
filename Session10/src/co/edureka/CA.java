@@ -1,0 +1,20 @@
+package co.edureka;
+
+public class CA {
+	
+	Integer id;
+	Integer a;
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Integer getA() {
+		return a;
+	}
+	public void setA(Integer a) {
+		this.a = a;
+	}
+}

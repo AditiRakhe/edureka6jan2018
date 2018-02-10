@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+   <bean id="aRef" class="co.edureka.Address">
+       <property name="adrsLine" value="Ejipura Road"/>
+       <property name="city" value="Bengaluru"/>
+       <property name="state" value="Karnataka"/>
+       <property name="zipCode" value="520001"/>
+   </bean>
+   
+   
+   <bean id="sRef" class="co.edureka.Student">
+       <property name="roll" value="101"/>
+       <property name="name" value="John"/>
+       <property name="age" value="10"/>
+       <property name="std" value="5"/>
+      <!--  <constructor-arg ref="aRef"/> --> <!-- Constructor Injection -->
+      <property name="adrs" ref="aRef"/> <!-- Setter Injection -->
+      
+      <property name="subjects">
+      	<list>
+      		<value>English</value>
+      		<value>Science</value>
+      		<value>Maths</value>
+      		<value>Physical Education</value>
+      		<value>Sports</value>
+      	</list>
+      </property>
+      
+   </bean>
+ 
+</beans>
